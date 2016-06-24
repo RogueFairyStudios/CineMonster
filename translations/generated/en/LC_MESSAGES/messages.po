@@ -1,0 +1,46 @@
+# English translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-06-23 21:43-0300\n"
+"PO-Revision-Date: 2016-06-23 21:56-0300\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: ../main.py:91
+msgid "searching_movies"
+msgstr "searching for a movie/serie..."
+
+#: ../main.py:99
+msgid "leader_board_title"
+msgstr "hall of fame"
+
+#: ../quiz.py:59
+msgid "not_possible_find_movie"
+msgstr "was not possible to find a movie/serie.."
+
+#: ../quiz.py:65
+msgid "question_which_movie"
+msgstr "what is the name of movie/serie above?"
+
+#: ../quiz.py:80
+msgid "correct_answer"
+msgstr "gave the correct answer!"
+
+#: ../quiz.py:91
+msgid "times_up"
+msgstr ""
+"Time's Up!\n"
+"Answer: "
