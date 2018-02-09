@@ -1,7 +1,3 @@
-[![Code Climate](https://codeclimate.com/github/toymak3r/CineMonster/badges/gpa.svg)](https://codeclimate.com/github/toymak3r/CineMonster)
-[![Test Coverage](https://codeclimate.com/github/toymak3r/CineMonster/badges/coverage.svg)](https://codeclimate.com/github/toymak3r/CineMonster/coverage)
-[![Issue Count](https://codeclimate.com/github/toymak3r/CineMonster/badges/issue_count.svg)](https://codeclimate.com/github/toymak3r/CineMonster)
-
 # CineMonster
 Telegram Bot Quiz About Series and Movies
 
