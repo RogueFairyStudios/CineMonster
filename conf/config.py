@@ -2,7 +2,7 @@
 # -------------------------------------------
 # CineMonster - A Quiz Bot for Telegram About Series and Movies
 # @author: Edward "Toy" Facundo
-# @site: http://edwardfacundo.wordpress.com
+# @site: http://github.com/toymak3r
 # -------------------------------------------
 
 
@@ -10,7 +10,7 @@ class Config(object):
     DEBUG = False
     TESTING = False
     DATABASE_URI = 'sqlite://:memory:'
-    TELEGRAM_BOT_KEY = ''
+    TELEGRAM_BOT_KEY = '203004059:AAHtXfSC2hRcar1TX5wC-IIVCoQQRPOMJHE'
     LOG_FILE = 'cinemonster.log'
     QUIZ_LANG = 'en'
 
