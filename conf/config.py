@@ -10,7 +10,7 @@ class Config(object):
     DEBUG = False
     TESTING = False
     DATABASE_URI = 'sqlite://:memory:'
-    TELEGRAM_BOT_KEY = '203004059:AAHtXfSC2hRcar1TX5wC-IIVCoQQRPOMJHE'
+    TELEGRAM_BOT_KEY = ''
     LOG_FILE = 'cinemonster.log'
     QUIZ_LANG = 'en'
 
