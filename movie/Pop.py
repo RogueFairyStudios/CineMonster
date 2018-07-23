@@ -2,14 +2,15 @@
 # -------------------------------------------
 # CineMonster - A Quiz Bot for Telegram About Series and Movies
 # @author: Edward "Toy" Facundo
-# @site: http://edwardfacundo.wordpress.com
+# @site: http://github.com/toymak3r
 # -------------------------------------------
 
-from server.Server import Server
-
-def main():
-    server = Server()
+from movie.Movie import Movie
 
 
-if __name__ == '__main__':
-    main()
+class Pop(Movie):
+
+    def __init__(self):
+        self.type = "pop"
+
+

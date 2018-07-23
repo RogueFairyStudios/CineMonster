@@ -20,25 +20,25 @@ msgstr ""
 
 #: ../main.py:91
 msgid "searching_movies"
-msgstr ""
+msgstr "buscando filmes"
 
 #: ../main.py:99
 msgid "leader_board_title"
-msgstr ""
+msgstr "hall da fama"
 
 #: ../quiz.py:59
 msgid "not_possible_find_movie"
-msgstr ""
+msgstr "não foi possível encontrar filme"
 
 #: ../quiz.py:65
 msgid "question_which_movie"
-msgstr ""
+msgstr "Qual filme?"
 
 #: ../quiz.py:80
 msgid "correct_answer"
-msgstr ""
+msgstr "Resposta correta:"
 
 #: ../quiz.py:91
 msgid "times_up"
-msgstr ""
+msgstr "Encerrou o tempo!"
 
