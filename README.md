@@ -15,7 +15,7 @@ You can see running, just add this bot to your group: [cinemonster](http://teleg
 5. type /leaderboard to see your ranking
 6. have fun!
 
-that's it!
+![alt text](https://i.imgflip.com/123oks.jpg)
 
 ## Thanks for:
 * [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot) <br />
