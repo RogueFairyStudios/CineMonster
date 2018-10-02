@@ -5,7 +5,6 @@
 # @site: http://edwardfacundo.wordpress.com
 # -------------------------------------------
 
-from quiz import Quiz
 import datetime
 import time
 
@@ -34,7 +33,7 @@ class Session:
         if player.id not in self.players.keys():
             self.players[player.id] = player
         else:
-            self.logger.error(str(self.chat_id)+" : "+"updater_timer: "+str(t))
+            self.update_log()
             raise ValueError(' já está na partida...')
 
     def player_quit(self, player):
@@ -54,11 +53,15 @@ class Session:
 
     def update_timer(self):
         if self.status == "running":
-            t = datetime.datetime.utcnow() - self.counter
-            self.logger.debug(str(self.chat_id)+" : "+"updater_timer: "+str(t))
+            t = self.update_log()
             if t.seconds > self.expiration:
                 self.status = "timed_out"
 
     def update_counter(self):
         self.counter = datetime.datetime.utcnow()
         self.logger.debug(str(self.chat_id)+" : "+"updater_counter: "+str(self.counter))
+
+    def update_log(self):
+        t = datetime.datetime.utcnow() - self.counter
+        self.logger.debug(str(self.chat_id) + " : " + "updater_timer: " + str(t))
+        return t

@@ -5,49 +5,32 @@
 # @site: http://edwardfacundo.wordpress.com
 # -------------------------------------------
 
-from translations.required import *
-from imdbpie import Imdb
-import telegram.ext
-from random import *
-from player import Player
+from player.Player import Player
+from random import choice
+from collection.Collection import Collection
+from miners.imdb.ImdbMiner import IMDB
 
 
 class Quiz:
     movies_type = ''
-    imdb = ''
     movie = None
+    images = None
 
     def __init__(self, session):
+        self.miner = IMDB()
         self.session = session
-        self.imdb = Imdb()
-        self.imdb = Imdb(cache=True)
 
     def set_level(self, level):
         pass
 
     def rand_movie(self, rand_type=None):
-            movie_id = ''
-            while self.movie is None:
-                if rand_type == "pop":
-                    pop_movies = self.imdb.top_250()
-                    number = randrange(0, len(pop_movies) - 1)
-                    movie_id = pop_movies[number]['tconst']
-
-                if rand_type is None:
-                    number = str(randrange(1, 99999))
-                    if len(number) < 7:
-                        number = '0' * (7 - len(number)) + number
-                    movie_id = "tt"+number  # formatting to IMDB_ID
-
-                self.movie = self.imdb.get_title_by_id(movie_id)
-
-                if self.movie is not None:
-                    if len(self.movie.trailer_image_urls) < 1:
-                        self.movie = None
+        movie_id = ''
+        collection = Collection(self.miner, rand_type)
+        self.movie, self.images = collection.get_rand_movie()
 
     def get_movie_photo(self):
         try:
-            return choice(self.movie.trailer_image_urls)
+            return choice(self.images['images'])['url']
         except ValueError as e:
             raise e
 
@@ -68,7 +51,7 @@ class Quiz:
 
     def check_resps(self, update):
         chat_id = update.message.chat_id
-        if str.lower(self.movie.title) == str.lower(update.message.text):
+        if str.lower(self.movie['base']['title']) == str.lower(update.message.text):
             player = Player(update.message.from_user.id)
             player.name = update.message.from_user.first_name+" "+update.message.from_user.last_name
             try:
@@ -80,6 +63,7 @@ class Quiz:
                                             msg=(player.name, _("correct_answer")),
                                             type_msg='bold')
             self.movie = None
+            self.session.status = "stopped"
 
     def check_expiration(self):
         try:
@@ -88,7 +72,7 @@ class Quiz:
             pass
         if self.session.status == "timed_out":
             self.session.messenger.send_msg(chat_id=self.session.chat_id,
-                                            msg=(_("times_up"), self.movie.title),
+                                            msg=(_("times_up"), self.movie['base']['title']),
                                             type_msg='bold')
-            self.session.status = "stop"
+            self.session.status = "stopped"
             self.movie = None
