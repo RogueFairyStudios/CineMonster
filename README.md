@@ -10,10 +10,10 @@ You can see running, just add this bot to your group: [cinemonster](http://teleg
 ## Running your Bot
 1. Configure by editing the config.py on /conf directory (don't forget to add your bot key)
 2. python main.py
-3. add bot to your group
-4. type /roll (randomic movies from all decades) or /roll pop ( the top 250 movies from IMDB )
-5. type /leaderboard to see your ranking
-6. have fun!
+3. Add bot to your group
+4. Type /roll (randomize movies from all decades) or /roll pop ( the top 250 movies from IMDB )
+5. Type /leaderboard to see your ranking
+6. Have fun!
 
 that's it!
 
