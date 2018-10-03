@@ -45,7 +45,8 @@ class Session:
     def get_leaderboard(self):
         ldb = ''
         for x in self.players:
-            ldb += self.players[x].name+" : "+str(self.players[x].get_points())+" \n"
+            ldb += self.players[x].name+" : " + \
+                str(self.players[x].get_points())+" \n"
         return ldb
 
     def set_messenger(self, messenger):
@@ -59,9 +60,11 @@ class Session:
 
     def update_counter(self):
         self.counter = datetime.datetime.utcnow()
-        self.logger.debug(str(self.chat_id)+" : "+"updater_counter: "+str(self.counter))
+        self.logger.debug(str(self.chat_id)+" : " +
+                          "updater_counter: "+str(self.counter))
 
     def update_log(self):
         t = datetime.datetime.utcnow() - self.counter
-        self.logger.debug(str(self.chat_id) + " : " + "updater_timer: " + str(t))
+        self.logger.debug(str(self.chat_id) + " : " +
+                          "updater_timer: " + str(t))
         return t

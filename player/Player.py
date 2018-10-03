@@ -5,6 +5,7 @@
 # @site: http://edwardfacundo.wordpress.com
 # -------------------------------------------
 
+
 class Player:
     id = ''
     points = 0

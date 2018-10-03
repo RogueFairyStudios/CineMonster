@@ -7,6 +7,7 @@
 
 import os
 
+
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -14,6 +15,7 @@ class Config(object):
     TELEGRAM_BOT_KEY = os.environ.get('CINEMONSTER_TELEGRAM_API_KEY')
     LOG_FILE = 'cinemonster.log'
     QUIZ_LANG = 'en'
+
 
 class ProductionConfig(Config):
     DATABASE_URI = 'mysql://user@localhost/foo'

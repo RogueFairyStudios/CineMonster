@@ -12,5 +12,3 @@ class Pop(Movie):
 
     def __init__(self):
         self.type = "pop"
-
-

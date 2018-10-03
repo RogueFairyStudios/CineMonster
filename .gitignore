@@ -172,6 +172,10 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+## Python Pipenv
+Pipfile
+Pipfile.lock
+
 ### Python Patch ###
 .venv/
 
@@ -220,11 +224,7 @@ bh_unicode_properties.cache
 GitHub.sublime-settings
 
 ### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode/
 
 ### Windows ###
 # Windows thumbnail cache files

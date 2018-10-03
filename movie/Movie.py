@@ -22,5 +22,3 @@ class Movie(object):
 
     def name(self):
         return self.name
-
-

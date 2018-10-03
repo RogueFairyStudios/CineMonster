@@ -7,6 +7,7 @@
 
 from server.Server import Server
 
+
 def main():
     server = Server()
 
