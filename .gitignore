@@ -1,5 +1,7 @@
 
 # Created by https://www.gitignore.io/api/git,linux,macos,python,windows,sublimetext,visualstudiocode
+### Pycharm ###
+.idea/
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
