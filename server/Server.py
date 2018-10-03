@@ -9,11 +9,12 @@ import logging
 from translations.required import *
 from argparse import ArgumentParser
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from conf.config import *
-from interfaces.telegram.messenger import Messenger
-from session.Session import Session
-from quiz.Quiz import Quiz
-from player import Player
+
+import conf
+import interfaces
+import session
+import quiz
+import player
 
 
 class Server:
@@ -58,11 +59,11 @@ class Server:
         args = arg_parser.parse_args()
 
         if args.env == "prod":
-            return ProductionConfig
+            return conf.ProductionConfig
         elif args.env == "dev":
-            return DevelopmentConfig
+            return conf.DevelopmentConfig
         else:
-            return TestingConfig
+            return conf.TestingConfig
 
     def error(self, update, error):
         self.logger.warning('Update "%s" caused error "%s"' % (update, error))
@@ -75,11 +76,11 @@ class Server:
     def command_start(self, bot, update):
         chat_id = update.message.chat_id
         if chat_id not in self.SESSIONS.keys():
-            self.messenger = Messenger(bot, self.logger)
-            self.SESSIONS[chat_id] = Session(
+            self.messenger = interfaces.TelegramMessenger(bot, self.logger)
+            self.SESSIONS[chat_id] = session.Session(
                 chat_id, self.config_instance, self.logger)
             self.SESSIONS[chat_id].set_messenger(self.messenger)
-            self.SESSIONS[chat_id].quiz = Quiz(self.SESSIONS[chat_id])
+            self.SESSIONS[chat_id].quiz = quiz.Quiz(self.SESSIONS[chat_id])
 
     def command_roll(self, bot, update, args=''):
         chat_id = update.message.chat_id
@@ -103,7 +104,7 @@ class Server:
     def command_action(self, bot, update):
         group = update.message.chat_id
         try:
-            player = Player(update.message.from_user.id)
+            player = player.Player(update.message.from_user.id)
             player.name = update.message.from_user.first_name + \
                 " " + update.message.from_user.last_name
             self.SESSIONS[group].player_add(player)
@@ -125,7 +126,7 @@ class Server:
     def command_cut(self, bot, update):
         group = update.message.chat_id
         try:
-            player = Player(update.message.from_user.id)
+            player = player.Player(update.message.from_user.id)
             self.SESSIONS[group].player_quit(player)
             self.SESSIONS[update.message.chat_id].messenger.send(update,
                                                                  update.message.from_user.first_name + " saiu da partida!")

@@ -5,11 +5,11 @@
 # @site: http://edwardfacundo.wordpress.com
 # -------------------------------------------
 
-from server.Server import Server
+import server
 
 
 def main():
-    server = Server()
+    server.Server()
 
 
 if __name__ == '__main__':
