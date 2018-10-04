@@ -17,7 +17,7 @@ class Messenger:
         self.bot = bot
 
     def send_msg(self, chat_id, msg, type_msg='regular'):
-        #TODO: trycat this
+        # TODO: trycat this
         msg = self.format(type_msg, msg)
         self.bot.send_message(chat_id=chat_id,
                               text=msg,
@@ -27,7 +27,7 @@ class Messenger:
         return self.formats[type_msg] % msg
 
     def send_photo(self, chat_id, photo, caption):
-        #TODO: trycat this
+        # TODO: trycat this
         self.bot.send_photo(chat_id=chat_id,
                             photo=photo,
                             caption=caption)
