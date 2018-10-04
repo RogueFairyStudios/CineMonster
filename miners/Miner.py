@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # -------------------------------------------
 # CineMonster - A Quiz Bot for Telegram About Series and Movies
 # @author: Edward "Toy" Facundo
@@ -22,4 +21,3 @@ class Miner(object):
 
     @abstractmethod
     def get_movie_by_id(self, movie_id): pass
-

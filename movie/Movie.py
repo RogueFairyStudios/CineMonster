@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # -------------------------------------------
 # CineMonster - A Quiz Bot for Telegram About Series and Movies
 # @author: Edward "Toy" Facundo
@@ -22,5 +21,3 @@ class Movie(object):
 
     def name(self):
         return self.name
-
-

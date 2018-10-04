@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # -------------------------------------------
 # CineMonster - A Quiz Bot for Telegram About Series and Movies
 # @author: Edward "Toy" Facundo
@@ -27,4 +26,3 @@ class IMDB(Miner):
 
     def get_movie_by_id(self, movie_id):
         return self.handle.get_title_images(movie_id), self.handle.get_title(movie_id)
-
