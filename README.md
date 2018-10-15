@@ -14,7 +14,7 @@ You can see it running, just add this bot to your group: [cinemonster](http://te
 3. Add bot to your group
 4. Type /roll (randomize movies from all decades) or /roll pop ( the top 250 movies from IMDB )
 5. Type /leaderboard to see your ranking
-6. Have fun!
+6. Enjoy and pass this amazing work to everyone.
 
 That's it!
 
