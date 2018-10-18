@@ -1,44 +1,49 @@
-# Portuguese (Brazil) translations for PROJECT.
+# Spanish translations for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# victorhck <victorhck@mailbox.org>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-10-18 14:35+0200\n"
-"PO-Revision-Date: 2018-10-18 14:35+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: pt_BR\n"
-"Language-Team: pt_BR <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"PO-Revision-Date: 2018-10-18 14:39+0100\n"
+"Last-Translator: victorhck <victorhck@mailbox.org>\n"
+"Language: es\n"
+"Language-Team: Spanish <>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: ../quiz/Quiz.py:41
 msgid "not_possible_find_movie"
-msgstr ""
+msgstr "no fue posible encontrar la película"
 
 #: ../quiz/Quiz.py:48
 msgid "question_which_movie"
-msgstr ""
+msgstr "¿Cual es el nombre de la película?"
 
 #: ../quiz/Quiz.py:64
 msgid "correct_answer"
-msgstr ""
+msgstr "¡Acertaste con la respuesta correcta!"
 
 #: ../quiz/Quiz.py:77
 msgid "times_up"
 msgstr ""
+"¡Se acabó el tiempo! "
+"La respuesta es: "
 
 #: ../server/Server.py:88
 msgid "searching_movies"
-msgstr ""
+msgstr "Buscando películas..."
 
 #: ../server/Server.py:95
 msgid "leader_board_title"
-msgstr ""
+msgstr "Salón de la fama"
+
 

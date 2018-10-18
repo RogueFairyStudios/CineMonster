@@ -4,7 +4,7 @@
 # requires: pybabel
 
 TRANSLATION_DIR=./
-LANGS=("pt_BR" "en") # todo: smarter detection
+LANGS=("pt_BR" "en" "es") # todo: smarter detection
 GENERATED_DIR=./generated
 options=("create" "update" "compile" "clean" "quit")
 select opt in "${options[@]}"
