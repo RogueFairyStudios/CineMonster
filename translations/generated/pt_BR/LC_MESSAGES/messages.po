@@ -18,27 +18,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../quiz/Quiz.py:41
+#: quiz\Quiz.py:41
 msgid "not_possible_find_movie"
 msgstr ""
 
-#: ../quiz/Quiz.py:48
+#: quiz\Quiz.py:48
 msgid "question_which_movie"
 msgstr ""
 
-#: ../quiz/Quiz.py:64
+#: quiz\Quiz.py:64
 msgid "correct_answer"
 msgstr ""
 
-#: ../quiz/Quiz.py:77
+#: quiz\Quiz.py:77
 msgid "times_up"
 msgstr ""
 
-#: ../server/Server.py:88
+#: server\Server.py:88
 msgid "searching_movies"
 msgstr ""
 
-#: ../server/Server.py:95
+#: server\Server.py:95
 msgid "leader_board_title"
 msgstr ""
 
+#: server\Server.py:111
+msgid " joined_the_game"
+msgstr " entrou na partida!"
+
+#: server\Server.py:119
+msgid "repeating"
+msgstr "=========REPETINDO========="
+
+#: server\Server.py:121
+msgid "what_is_the_movie_series_name"
+msgstr "Qual o nome do filme/série?"
+
+#: server\Server.py:131
+msgid "_left_the_game!"
+msgstr " saiu da partida!"
+
+#: server\Server.py:140
+msgid "ending_the_game"
+msgstr "Encerrando a partida..."
+
+#: server\Server.py:143
+msgid "game_was_not_finished"
+msgstr "Não foi possível encerrar a partida: "

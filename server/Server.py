@@ -108,7 +108,7 @@ class Server:
                 " " + update.message.from_user.last_name
             self.SESSIONS[group].player_add(player)
             self.SESSIONS[update.message.chat_id].messenger.send(
-                update, player.name + " entrou na partida!")
+                update, player.name + _(" joined_the_game"))
         except ValueError as e:
             self.SESSIONS[update.message.chat_id].messenger.send(
                 update, update.message.from_user.first_name + e.args[0])
@@ -116,9 +116,9 @@ class Server:
     def command_repeat(self, bot, update):
         movie_img = self.SESSIONS[update.message.chat_id].quiz.get_question()
         self.SESSIONS[update.message.chat_id].messenger.send(
-            update, "=========REPETINDO=========")
+            update, _("repeating"))
         bot.send_photo(chat_id=update.message.chat_id,
-                       photo=movie_img, caption="Qual o nome do filme/série?")
+                       photo=movie_img, caption=_("what_is_the_movie_series_name"))
         self.SESSIONS[update.message.chat_id].messenger.send(
             update, "===========================")
 
@@ -128,7 +128,7 @@ class Server:
             player = player.Player(update.message.from_user.id)
             self.SESSIONS[group].player_quit(player)
             self.SESSIONS[update.message.chat_id].messenger.send(update,
-                                                                 update.message.from_user.first_name + " saiu da partida!")
+                                                                 update.message.from_user.first_name + _("_left_the_game!"))
         except ValueError as e:
             self.SESSIONS[update.message.chat_id].messenger.send(
                 update, update.message.from_user.first_name + e.args[0])
@@ -137,10 +137,10 @@ class Server:
         try:
             del (self.SESSIONS[update.message.chat_id])
             self.SESSIONS[update.message.chat_id].messenger.send(
-                update, "Encerrando a partida...")
+                update, _("ending_the_game"))
         except ValueError as e:
             self.SESSIONS[update.message.chat_id].messenger.send(
-                update, "Não foi possível encerrar a partida: %s" % e)
+                update, _("game_was_not_finished") + e)
 
     def command_check_resps(self, bot, update):
         self.SESSIONS[update.message.chat_id].quiz.check_resps(update)
