@@ -46,26 +46,26 @@ msgstr "Buscando películas..."
 msgid "leader_board_title"
 msgstr "Salón de la fama"
 
-#: server\Server.py:111
+#: ../server/Server.py:111
 msgid " joined_the_game"
 msgstr ""
 
-#: server\Server.py:119
+#: ../server/Server.py:119
 msgid "repeating"
 msgstr ""
 
-#: server\Server.py:121
+#: ../server/Server.py:121
 msgid "what_is_the_movie_series_name"
 msgstr ""
 
-#: server\Server.py:131
+#: ../server/Server.py:131
 msgid "_left_the_game!"
 msgstr ""
 
-#: server\Server.py:140
+#: ../server/Server.py:140
 msgid "ending_the_game"
 msgstr ""
 
-#: server\Server.py:143
+#: ../server/Server.py:143
 msgid "game_was_not_finished"
 msgstr ""
