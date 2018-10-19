@@ -3,7 +3,10 @@
 # @author: Edward "Toy" Facundo
 # @site: http://github.com/toymak3r
 # -------------------------------------------
-
+import numpy
+import textwrap
+import os
+import io
 from abc import ABCMeta, abstractmethod
 
 
