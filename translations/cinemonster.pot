@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
+
 #: ../quiz/Quiz.py:41
 msgid "not_possible_find_movie"
 msgstr ""
@@ -39,5 +40,29 @@ msgstr ""
 
 #: ../server/Server.py:95
 msgid "leader_board_title"
+msgstr ""
+
+#: ../server/Server.py:111
+msgid " joined_the_game"
+msgstr ""
+
+#: ../server/Server.py:119
+msgid "repeating"
+msgstr ""
+
+#: ../server/Server.py:121
+msgid "what_is_the_movie_series_name"
+msgstr ""
+
+#: ../server/Server.py:131
+msgid "_left_the_game!"
+msgstr ""
+
+#: ../server/Server.py:140
+msgid "ending_the_game"
+msgstr ""
+
+#: ../server/Server.py:143
+msgid "game_was_not_finished"
 msgstr ""
 
