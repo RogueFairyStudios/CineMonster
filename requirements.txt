@@ -20,7 +20,7 @@ public==0.0.33
 py==1.4.31
 python-telegram-bot==4.2.1
 pytz==2016.4
-requests==2.10.0
+requests==2.20.0
 six==1.10.0
 SQLAlchemy==1.0.13
 telegram==0.0.1
