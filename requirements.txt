@@ -17,7 +17,7 @@ isstring==0.0.9
 lockfile==0.12.2
 objectname==0.0.8
 public==0.0.33
-py==1.4.31
+py==1.10.0
 python-telegram-bot==4.2.1
 pytz==2016.4
 requests==2.20.0
